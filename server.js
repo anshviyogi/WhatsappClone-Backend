@@ -51,6 +51,10 @@ db.once('open',()=>{
 
 // Api Routes
 
+app.get('/',(req,res)=>{
+    res.json({Message:"Server started !!"})
+})
+
 // @Posting messages
 app.post('/messages/new',(req,res)=>{
     const dbMessage = req.body
